@@ -1,0 +1,1207 @@
+: 1717312443:0;find .ulf
+: 1717312781:0;find --help
+: 1717321101:0;git branch -D SG_Workflow
+: 1717321105:0;git branch SG_Workflow
+: 1717321110:0;git checkout SG_Workflow
+: 1717321213:0;gb -D SG_Workflow
+: 1717321265:0;gb SG_Workflow
+: 1717321279:0;cd .github
+: 1717321312:0;nv failure.md
+: 1717321452:0;cd workflows
+: 1717321474:0;nv sketch-n-guess_tests.yml
+: 1717321567:0;cat .github/failure.md
+: 1717321660:0;git ad .
+: 1717321692:0;gcm "Dodan workflow za testiranje merge-a."
+: 1717322023:0;cla
+: 1717322185:0;gco SG_Workflow
+: 1717322213:0;echo "TEST" > SG_WorkflowTest.txt
+: 1717322232:0;gcm "Test za SG workflow."
+: 1717322240:0;git push origin SG_Workflow
+: 1717322358:0;gco Sketch-n-Guess
+: 1717323613:0;searchp BeanCounter
+: 1717323622:0;searchp beancounter
+: 1717323630:0;searchp smtm
+: 1717324559:0;curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \\
+| grep -wo "https.*linux-amd64*.tar.gz" \\
+| wget -qi - \\
+
+: 1717324593:0;curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \\
+| grep -wo "https.*linux-amd64*.tar.gz" \\
+| wget -qi - \\
+&& tar -xvf ticker*.tar.gz ticker \\
+&& chmod +x ./ticker \\
+&& sudo mv ticker /usr/local/bin/
+: 1717324605:0;ticker
+: 1717324666:0;rrm ticker-4.6.2-linux-amd64.tar.gz
+: 1717324667:0;clsa
+: 1717324770:0;ticker -w NET,AAPL,TSLA
+: 1717324918:0;ticker -w NET,AAPL,TSLA -i 1
+: 1717324977:0;sudo rm ticker
+: 1717336225:0;installp qbittorrent
+: 1717336296:0;removep qbittorrent
+: 1717352188:0;gco master
+: 1717362565:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\ 
+: 1717362633:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\ 
+: 1717362637:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000
+: 1717362708:0;ping rsl-server.duckdns.org\
+
+: 1717362740:0;telnet rsl-server.duckdns.org 4455
+: 1717363040:0;sudo vi /etc/fstab
+: 1717363070:0;ss -ltun
+: 1717364142:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\
+
+: 1717364571:0;smbclient //rsl-server.duckdns.org/Share-o5-13 -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364592:0;smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364598:0;sudo smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364621:0;sudo smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds\
+
+: 1717414867:0;todo add "PI - 10.06. -- "
+: 1717420168:0;todo add "UUUI - 11.06. -- 10h (I5)"
+: 1717425661:0;cat README.md
+: 1717426560:0;todo add "OPS - 20.06. -- 8:15 (I1//I3)"
+: 1717443776:0;cd Tools/Unity/Projects/Unity-GameHub
+: 1717443778:0;git fetch; git pull
+: 1717477458:0;todo -h
+: 1717477464:0;todo rm 7
+: 1717477466:0;todo
+: 1717491777:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455\
+
+: 1717492481:0;pg rsl-server.duckdns.org4
+: 1717511271:0;todo sort; todo
+: 1717511278:0;todo done 1
+: 1717511339:0;todo add "RM - 12.06. -- (I8)"
+: 1717511441:0;zsh -e "clear"
+: 1717511445:0;zsh -h
+: 1717511448:0;zsh --help
+: 1717511581:0;cd .config/zsh/.oh-my-zsh/plugins/zsh_reload
+: 1717511605:0;git merge
+: 1717511622:0;git add .
+: 1717511696:0;srcc
+: 1717511727:0;zr
+: 1717517992:0;gcl https://github.com/R5C-V15T6AMD5S/Fedora-Dotfiles.git
+: 1717532515:0;sudo wine UnityModManager.exe
+: 1717532528:0;su
+: 1717575539:0;caava
+: 1717576914:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455\
+
+: 1717576935:0;ssh-rsl
+: 1717578113:0;echo url="https://www.duckdns.org/update?domains=rsl-server&token=2f1b8cb7-9ed9-44d0-afc7-4ff2ed6bfded&ip=" | curl -k -o ~/duckdns/duck.log -K -
+: 1717579563:0;./home_server_status.sh
+: 1717591759:0;vim index.html
+: 1717592848:0;cat index.html
+: 1717593049:0;rrm index.html
+: 1717593051:0;nv index.html
+: 1717663792:0;ka polybar
+: 1717664138:0;ka VIber
+: 1717664141:0;ka viber
+: 1717667234:0;sww python3 ~/.config/i3/scripts/i3-swallow.py
+: 1717667236:0;lxa
+: 1717702150:0;sudo cava[6;5;8u5;8u;8uF5~
+: 1717702165:0;clcfclnf
+: 1717745050:0;dea
+: 1717750413:0;pg https://cogretfund.zapto.org
+: 1717750418:0;pg cogretfund.zapto.org
+: 1717750676:0;polybar-msg cmd toggle
+: 1717750686:0;polybar-msg cmd 
+: 1717750690:0;polybar-msg cmd -help
+: 1717750697:0;man polybar-msg
+: 1717750910:0;ka polybar; sww i3bar
+: 1717762799:0;ka polybar; ka i3bar; sww i3bar
+: 1717774269:0;killall -q i3bar | wait; bash -c ~/.config/i3/scripts/polybar.sh
+: 1717774483:0;i3-msg "light -A 5"
+: 1717774488:0;i3-msg "exec light -A 5"
+: 1717774509:0;ka polybar; killall -q i3bar | wait; bash -c ~/.config/i3/scripts/polybar.sh
+: 1717774669:0;ls /sys/class/backlight/
+: 1717774682:0;ls /sys/class/backlight/amdgpu_bl1
+: 1717774730:0;echo 5 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1717774734:0;sudo echo 5 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1717774779:0;sudo nvim /etc/udev/rules.d/backlight.rules
+: 1717781399:0;installp bspwn
+: 1717781409:0;installp bspwm
+: 1717783025:0;searchp bsp-layout
+: 1717783062:0;rrm bsp-layout
+: 1717784668:0;bsp-layout 1
+: 1717784677:0;man bsp-layout
+: 1717784755:0;bash -c ~/.config/bspwm/scripts/polybar.sh
+: 1717784821:0;bspwm
+: 1717785099:0;killall -q sxhkd | wait; sxhkd -c ~/.config/sxhkd/sxhkdrc_bspwm &
+: 1717785951:0;chmod +x ~/.config/bspwm/bspwmrc
+: 1717785998:0;cd .scripts./wm
+: 1717786338:0;ka polybar; killall -q i3bar | wait; bash -c ~/.config/bspwm/scripts/polybar.sh
+: 1717786518:0;clcff
+: 1717787586:0;amixer
+: 1717787602:0;awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master)
+: 1717866451:0;ka bspwm
+: 1717866458:0;killall -q bspwm
+: 1717866463:0;killall -q polybar
+: 1717868416:0;htop]
+: 1717869823:0;neofetch
+: 1717928323:0;ping -c 5 rsl-server.duckdns.org
+: 1717942015:0;q7
+: 1718026961:0;nv home_server_status.sh
+: 1718038532:0;cd .local/share/applications/Games
+: 1718038960:0;hello
+: 1718039009:0;light -A 5; notify-send "Brightness: $(light)"
+: 1718085371:0;python3 Eeduroam-Setup-V2.py
+: 1718099132:0;todo done 2
+: 1718116096:0;chrome
+: 1718122765:0;sww xed
+: 1718122855:0;cat ~/.config/bspwm/sxhkdrc
+: 1718122910:0;cd .sc
+: 1718123119:0;ka polybar | wait; ./polybar.sh
+: 1718124254:0;bspc config top_padding 0
+: 1718124746:0;chmod +x .config/bspwm/scripts/polybar.sh
+: 1718124777:0;chmod +x .config/bspwm/scripts/bar_toggler.sh
+: 1718124784:0;rrm .config/polybar/scripts/bar_toggler.sh
+: 1718125181:0;bspc config top_padding 25
+: 1718125189:0;bspc config top_padding 28
+: 1718125192:0;bspc config top_padding 26
+: 1718125196:0;bspc config top_padding 30
+: 1718125727:0;./bar_toggler.sh
+: 1718208907:0;todo done 3
+: 1718208926:0;todo add "Provjeri dal je dosao mail or SERVISA"
+: 1718208943:0;todo add "PODIGNI UGOVOR kad je odobreno"
+: 1718209071:0;todo rm 5 6 7 8
+: 1718215707:0;bspc monitor --focus next
+: 1718216251:0;./.config/bspwm/scripts/polybar.sh
+: 1718216263:0;sww ./.config/bspwm/scripts/polybar.sh
+: 1718287812:0;rm 3
+: 1718303385:0;searchp kdeconnect
+: 1718303405:0;installp kdeconnectd
+: 1718303617:0;kdeconnect-cli
+: 1718303621:0;kdeconnect-cli -l
+: 1718303695:0;removep kdeconnectd-23.08.5-2.fc39.x86_64
+: 1718305431:0;ka kdeconnectd-indicator
+: 1718348899:0;sudo systemd-resolve --flush-caches
+: 1718348912:0;nslookup rsl-server.duckdns.org 8.8.8.8
+: 1718348928:0;dig @1.1.1.1 rsl-server.duckdns.org
+: 1718348946:0;nslookup rsl-server.duckdns.org 1.1.1.1
+: 1718444085:0;sudo ranger
+: 1718463390:0;rdž
+: 1718522214:0;sudo umount /media/SummaModusOperandi
+: 1718530663:0;xrandr
+: 1718531438:0;ls -lAh
+: 1718531443:0;ls -la
+: 1718531463:0;ls --color=auto --group-directories-first
+: 1718542912:0;searchp cc
+: 1718542974:0;searchp xorg-xinit
+: 1718542980:0;searchp xorg-init
+: 1718542983:0;searchp xorg-
+: 1718542991:0;searchp xorg-X11-init
+: 1718543052:0;sudo dnf install xorg-x11-server-Xorg\
+sudo dnf install xorg-x11-xinit\
+sudo dnf install xorg-x11-utils\
+sudo dnf install xorg-x11-fonts-*\
+
+: 1718543065:0;searchp xorg-x11-util
+: 1718543083:0;gcl https://github.com/cococry/ragnar.git
+: 1718543090:0;git clone https://github.com/cococry/ragnar.git
+: 1718543097:0;cd ragnar
+: 1718543145:0;sudo make ragnar install
+: 1718543258:0;nv .config/zsh/.zshrc
+: 1718543384:0;locate .xinit
+: 1718543386:0;locate xinit
+: 1718543389:0;locate xinitrc
+: 1718543401:0;nv /home/o5-13/.config/X11/xinitrc
+: 1718543538:0;startx
+: 1718543605:0;cd Tools/ragnar
+: 1718543611:0;sudo make ragnar uninstall
+: 1718543625:0;rrm ragnar
+: 1718547122:0;removep unityhub
+: 1718547159:0;unityhub
+: 1718547631:0;removep codee
+: 1718547636:0;removep code
+: 1718548119:0;removep jupyter
+: 1718548133:0;jupyter notebook
+: 1718548229:0;python3 -m pip uninstall --user virtualenv
+: 1718565443:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,port=4455
+: 1718565515:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -ocredentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565522:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565655:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565832:0;scp o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565840:0;scp -p 4812 o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565865:0;scp -P 4812 o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565882:0;feh GiftFromAFriend.jpg
+: 1718566178:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads/pc.jpg
+: 1718566183:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads/
+: 1718566352:0;rsl-scp/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718566408:0;nv .aliases
+: 1718566415:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718566611:0;cd Downloads; c
+: 1718566697:0;rsl-scp o5-13 GiftFromAFriend.jpg ~/Downloads
+: 1718566732:0;rsl-scp o5-13 o5-13 GiftFromAFriend.jpg ~/Downloads
+: 1718566766:0;rrm GiftFromAFriend.jpg
+: 1718566768:0;nv .functions
+: 1718567872:0;sudo cat .smbcreds 
+: 1718568889:0;ip a
+: 1718570070:0;hostname
+: 1718570340:0;nslookup rsl-server.duckdns.org
+: 1718613373:0;bspc nodee -t
+: 1718613375:0;bspc node -t
+: 1718613378:0;bspc node -h
+: 1718613381:0;bspc -h
+: 1718613385:0;man bspc
+: 1718614363:0;calc
+: 1718614365:0;cal 
+: 1718614371:0;cal july
+: 1718704249:0;rsl-scp o5-13 o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718704256:0;cd Doq
+: 1718704266:0;rm GiftFromAFriend.jpg
+: 1718704376:0;reinstallp nitrogen
+: 1718704449:0;searchp gtk-
+: 1718704505:0;reinstall gtk3
+: 1718704509:0;reinstallp gtk3
+: 1718704558:0;reboot
+: 1718704631:0;searchp clearlook
+: 1718704673:0;installp clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718707535:0;tcloc
+: 1718778772:0;clmnf
+: 1718778790:0;btr
+: 1718781889:0;sww flatpak run com.discordapp.Discord
+: 1718786767:0;removep clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718786780:0;sudo dnf remove clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718786829:0;btrdisinst
+: 1718801598:0;flatpak reinstall com.discordapp.Discord
+: 1718801602:0;flatpak install com.discordapp.Discord
+: 1718801617:0;flatpak run com.discordapp.Discord
+: 1718801630:0;searchp xapp-gtk3
+: 1718801648:0;searchp xapp-
+: 1718801664:0;installp gtk3-engines
+: 1718801673:0;searchp gtk2-engines
+: 1718801683:0;searchp gtk3-engines
+: 1718801695:0;installp gtk2-engines
+: 1718801781:0;sww ./BetterDiscord-Linux.AppImage
+: 1718801861:0;betterdiscordctl
+: 1718801864:0;betterdiscordctl --help
+: 1718801870:0;betterdiscordctl reinstall
+: 1718801917:0;rm betterdiscordctl
+: 1718801919:0;sudo rm betterdiscordctl
+: 1718801931:0;flatpak uninstall com.discordapp.Discord
+: 1718802025:0;sudo ./BetterDiscord-Linux.AppImage
+: 1718802031:0;./bert
+: 1718802112:0;sudo chmod +x BetterDiscord-Linux.AppImage
+: 1718802168:0;cd Tools/
+: 1718802262:0;cd Discord
+: 1718802424:0;cd Dic
+: 1718802523:0;sudo cp Discord /usr/local/bin/
+: 1718802568:0;sudo rm /usr/local/bin/Discord
+: 1718802608:0;cd .local/share/applications/Tools
+: 1718802616:0;chmod +x discord.desktop
+: 1718802908:0;cd Pictures/WallPP/Colorschemes
+: 1718803606:0;flatpak --installation
+: 1718803966:0;spicetify restore backup
+: 1718804080:0;cd DDD/var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps/zlink/css
+: 1718804095:0;cd Apps/zlink/
+: 1718804505:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh -o /tmp/install.sh\
+sh /tmp/install.sh 1.2.1
+: 1718805006:0;seft
+: 1718805733:0;betterdiscordctl --flatpak-bin flatpak install
+: 1718805743:0;cd .config/zsh
+: 1718805748:0;nvim .functions
+: 1718805768:0;nvim .aliases
+: 1718805808:0;history
+: 1718809819:0;searchp fvwn
+: 1718809824:0;searchp fvwm
+: 1718825914:0;searchp emacs
+: 1718825922:0;installp emacs
+: 1718826163:0;emacs
+: 1718868501:0;todo rm 2
+: 1718917107:0;ka xfce4-power
+: 1718917110:0;ka xfce4-power-ma
+: 1718917382:0;sudo nvim /etc/X11/xinit/xinitrc
+: 1718917558:0;sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf
+: 1718917578:0;xbacklight -dec 5
+: 1718951726:0;ka Discord
+: 1718959675:0;cacva
+: 1718960243:0;nv .todo
+: 1719006543:0;cd .config/polybar
+: 1719006652:0;ka polybar | wait; 
+: 1719006659:0;cd .config/bspwm
+: 1719007580:0;skgt
+: 1719008641:0;sudo nvim /etc/default/grub
+: 1719008712:0;cd /usr/share/grub/themes/argon
+: 1719008732:0;sudo cp theme_everforest.txt theme_kanagawa.txt
+: 1719008802:0;sudo nvim theme_kanagawa.txt
+: 1719008987:0;sudo cp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png /usr/share/grub/themes/argon/bg/kanagawa.png
+: 1719008994:0;cd bg
+: 1719009004:0;sudo cp kanagawa.png ../background.png
+: 1719009101:0;sudo cp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png /usr/share/backgrounds/kanagawa.png
+: 1719009319:0;sudo cp chaos.jpg /usr/share/backgrounds/chaos.jpg
+: 1719010186:0;e test.cpp
+: 1719010198:0;gcc test.cpp
+: 1719011185:0;cd Tools/Github-Stuff/Fedora-Dotfiles
+: 1719011189:0;cd Startpage-Custom
+: 1719011193:0;cd themes
+: 1719011200:0;cp dracula.css kanagawa.css
+: 1719011686:0;flameshot gui
+: 1719012525:0;rsl-
+: 1719035147:0;killall -q dunst | wait; dunst -config ~/.config/dunst/dunstrc &
+: 1719126814:0;discord
+: 1719126819:0;Discord
+: 1719126823:0;cd Tools/Discord
+: 1719126840:0;./Discord
+: 1719126871:0;./discord.desktop
+: 1719265454:0;cvac
+: 1719293764:0;dnf clean packages
+: 1719293766:0;sudo dnf clean packages
+: 1719297895:0;nv .
+: 1719304137:0;nmcli
+: 1719304172:0;sww nm-applet
+: 1719305535:0;clnbf
+: 1719307017:0;cal septermber
+: 1719307022:0;cal september
+: 1719310523:0;rsl-status
+: 1719350233:0;2cava
+: 1719584971:0;zathura
+: 1719673639:0;e .todo
+: 1719685303:0;cd Games/fp13_linux_20240425m
+: 1719685309:0;sww ./start-flashpoint.sh
+: 1719685573:0;installp pulseaudio xorg-x11-server-Xorg libXcomposite.i686 gtk3 nss php bash gtk2 libXt 
+: 1719685621:0;installp pulseaudio xorg-x11-server-Xorg libXcomposite.i686 gtk3 nss php bash gtk2 libXt --alllowerasing
+: 1719689931:0;v
+: 1719689964:0;uzip WinDev2404Eval.VirtualBox.zip
+: 1719909485:0;removep emacs
+: 1719909490:0;removep emacs-filesystem-1:29.3-1.fc39.noarch
+: 1719909509:0;installp emacs-filesystem-1:29.
+: 1719909513:0;installp emacs-filesystem
+: 1719909700:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin inus-m17m intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-ddevel rmpdevtools setroubleshoot simplenote system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719909739:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin ibus-m17m intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-devel rpmdevtools setroubleshoot system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719909752:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin ibus-m17n intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-devel rpmdevtools setroubleshoot system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719974363:0;swp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png
+: 1719974419:0;cd ~; clnf
+: 1719974545:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719974548:0;feh --no-fehbg --bg-scale 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png
+: 1719974559:0;nitrogen
+: 1719980673:0;5;9u5;9u
+: 1719980742:0;deactivate
+: 1719980750:0;py-uuui
+: 1720027998:0;rsl-ssh 
+: 1720168496:0;todo rm 3
+: 1720284097:0;upday<
+: 1720289283:0;searchp vimb
+: 1720289297:0;installp vimb
+: 1720289465:0;removep vimb
+: 1720711862:0;todo rm 1
+: 1720719802:0;swp 4004.png
+: 1720793061:0;installp akmod-VirtualBOx kernel-devel-$(uname -r)
+: 1720793075:0;installp akmod-VirtualBox kernel-devel-$(uname -r)
+: 1720794180:0;update-grub
+: 1720794985:0;removep hexchat
+: 1721437928:0;export ZDOTDIR="$HOME/.config/zsh"
+: 1721437928:0;export ZSH="$HOME/.config/zsh/.oh-my-zsh"
+: 1721438136:0;compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+: 1721438120:0;vim .zshrc
+: 1721438165:0;sudo /etc/zshenv
+: 1721438176:0;sudo vim /etc/zshenv
+: 1721438280:0;./xdg-ninja.sh
+: 1721438370:0;cd xdg-ninja
+: 1721438376:0;clear;./xdg-ninja.sh
+: 1721449837:0;sudo cp -r Dracula-cursors /usr/share/icons
+: 1721449851:0;sudo cp -r Dracula-Icons /usr/share/icons
+: 1721449860:0;sudo cp -r Dracula-GTK /usr/share/themes
+: 1721450638:0;fc-cache -fv
+: 1721450794:0;sudo zypper install eza
+: 1721450823:0;cd Art
+: 1721450850:0;sudo cp Kraken.png /usr/share/wallpapers/openSUSEdefault/contents/images
+: 1721450875:0;sudo zypper install nitrogen cpufetch
+: 1721450896:0;sudo zypper install tty-clock
+: 1721450975:0;git clone https://github.com/karlstav/cava.git
+: 1721450979:0;cd cava
+: 1721451040:0;cd Tools/cava
+: 1721451042:0;./autogen.sh
+: 1721451085:0;sudo zypper install alsa-devel fftw3-devel libpulse-devel libtool autoconf-archive pkgconf
+: 1721451109:0;sudo zypper install gcc
+: 1721451146:0;sudo zypper in iniparser
+: 1721451153:0;sudo zypper se iniparser
+: 1721451168:0;sudo zypper in libiniparser1
+: 1721451176:0;./configure
+: 1721451208:0;sudo zypper install cava
+: 1721451300:0;sudo zypper se keepass
+: 1721451316:0;sudo zypper in keepassxc
+: 1721451432:0;flatpak install flathub com.viber.Viber
+: 1721451478:0;flatpak install flathub com.discordapp.Discord
+: 1721451512:0;flatpak install flathub com.simplenote.Simplenote
+: 1721451565:0;cd /
+: 1721451568:0;cd mnt
+: 1721451582:0;sudo mkdir SummaModusOperandi
+: 1721451591:0;cd ~/.config/zsh
+: 1721451594:0;cat .functions
+: 1721451616:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,uid=1000,port=4455
+: 1721451887:0;sudo zypper in samba samba-client
+: 1721453313:0;git clone https://gitlab.com/dwt1/shell-color-scripts.git
+: 1721453319:0;cd shell-color-scripts
+: 1721453358:0;rm
+: 1721453394:0;sudo zypper install make
+: 1721453419:0;colorscripts -r
+: 1721453439:0;colorscript
+: 1721453441:0;colorscript -r
+: 1721453486:0;sudo zypper install cargo
+: 1721453526:0;git clone https://github.com/sioodmy/todo.git
+: 1721453538:0;cd todo
+: 1721453539:0;cargo build --release
+: 1721453555:0;sudo cp target/release/todo /usr/local/bin
+: 1721453746:0;sudo zypper
+: 1721453821:0;installp nvim
+: 1721453983:0;installp zathura
+: 1721454020:0;flatpak uninstall org.libreoffice.LibreOffice//fresh
+: 1721454023:0;flatpak uninstall org.libreoffice.LibreOffice
+: 1721454211:0;installp xed
+: 1721454349:0;installp deluge
+: 1721454501:0;flatpak install flathub org.libreoffice.LibreOffice
+: 1721454508:0;git clone https://github.com/budlabs/i3ass.git
+: 1721454518:0;cd i3ass
+: 1721454543:0;i3eun
+: 1721454847:0;installp dmenu fzf rofi 
+: 1721454873:0;installp clipmenu
+: 1721454897:0;gcl https://github.com/cdown/clipmenu.git
+: 1721454900:0;cd clipmenu
+: 1721454931:0;installp xsel clipnotify
+: 1721454965:0;gcl https://github.com/cdown/clipnotify.git
+: 1721455052:0;installp light
+: 1721455142:0;installp playerctl
+: 1721455166:0;xkbset q
+: 1721455190:0;installp xkbset numlockx unclutter 
+: 1721455273:0;gcl https://github.com/nwg-piotr/autotiling.git
+: 1721455319:0;installp python312-i3ipc
+: 1721455401:0;cd autotiling
+: 1721455415:0;sudo cp main.py /usr/local/bin/autotiling
+: 1721455420:0;cd /usr/local
+: 1721455424:0;cd /bin
+: 1721455476:0;chmod +x autotiling
+: 1721455479:0;sudo chmod +x autotiling
+: 1721455507:0;searchp xsel
+: 1721455526:0;installp xsel
+: 1721455542:0;cd ~/Tools/clipmenu
+: 1721455609:0;searchp X11
+: 1721455626:0;installp xorg-x11
+: 1721455668:0;cd clipnotify
+: 1721455708:0;installp libx11-deevel
+: 1721455714:0;installp libX11-devel
+: 1721455796:0;installp libxtst-dev
+: 1721455846:0;installp libxcb-xfixes0-32bit
+: 1721455867:0;installp libxcb-xfixe
+: 1721455871:0;installp libxcb-xfixes
+: 1721455882:0;searchp libxcb-xfixes
+: 1721455888:0;searchp libxcb-xfixes0
+: 1721455903:0;removep libxcb-xfixes0-32bit
+: 1721455912:0;installp libxcb-xfixes0
+: 1721455935:0;searchp xfixes
+: 1721455951:0;installp libXfixes-devel
+: 1721455974:0;cd clipmenu/
+: 1721455983:0;sww clipmenud
+: 1721455987:0;clipmenu
+: 1721456027:0;cd ~/Tools
+: 1721456040:0;https://github.com/rjekker/i3-battery-popup.git
+: 1721456043:0;gcl https://github.com/rjekker/i3-battery-popup.git
+: 1721456051:0;cd i3-battery-popup
+: 1721456072:0;sudo cp i3-battery-popup /usr/local/bin
+: 1721456629:0;cd Tools/xdg-ninja
+: 1721456631:0;xdgf
+: 1721458071:0;source $ZSH/oh-my-zsh.sh
+: 1721458080:0;source ~/.config/zsh/.zshenv
+: 1721458414:0;sudo nvim /etc/zshrc
+: 1721458441:0;sudo nvim /etc/zprofile
+: 1721458461:0;sudo nvim /etc/zsh_command_not_found
+: 1721458471:0;sudo nvim /etc/zshenv
+: 1721458947:0;sudo zypper update
+: 1721459241:0;sww xfwm4
+: 1721459403:0;picom
+: 1721459588:0;i3-msg reload
+: 1721460033:0;i3
+: 1721460217:0;installp python3
+: 1721460375:0;lxappearance
+: 1721460413:0;cd .config/i3/scripts/
+: 1721460445:0;installp arandr
+: 1721460478:0;./monitor_init.sh
+: 1721460607:0;ssfs
+: 1721460611:0;sshfs
+: 1721460701:0;installp sshfs
+: 1721460723:0;installp openssh
+: 1721460765:0;sshfs o5-13@rsl-server.duckdns.org:/home/share /mnt/SummaModusOperandi
+: 1721460771:0;sudo sshfs o5-13@rsl-server.duckdns.org:/home/share /mnt/SummaModusOperandi
+: 1721460785:0;sudo systemctl start sshd
+: 1721460794:0;sudo systemctl enable sshd
+: 1721460999:0;sshfs 
+: 1721461065:0;sudo chown o5-14:o5-14 /mnt/SummaModusOperandi
+: 1721461072:0;sshfs o5-13@192.168.0.20:/home/share /mnt/SummaModusOperandi
+: 1721461088:0;cd /mnt
+: 1721461159:0;installp openssh-server
+: 1721461460:0;chmod 600 /home/o5-14/.smbcreds\
+
+: 1721461466:0;sudo mkdir -p /mnt/SummaModusOperandi\
+
+: 1721461479:0;cd /mnt/SummaModusOperandi\
+
+: 1721461492:0;sudo zypper install cifs-utils\
+
+: 1721461510:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o credentials=/home/o5-14/.smbcreds,uid=1000,port=4455\
+
+: 1721461530:0;sudo mount -a\
+
+: 1721461569:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o credentials=/home/o5-14/.smbcreds,uid=1000,port=4455,vers=3.0
+: 1721461584:0;sudo dmesg | grep -i cifs\
+
+: 1721461645:0;smbclient -L //rsl-server.duckdns.org -U o5-14 -p 4455
+: 1721461660:0;nslookup rsl-server.duckdns.org\
+
+: 1721461677:0;sudo mount -v -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o credentials=/home/o5-14/.smbcreds,uid=1000,port=4455\
+
+: 1721461720:0;sudo nvim /etc/fstab
+: 1721461733:0;cleear
+: 1721461748:0;sudo umount /mn
+: 1721461838:0;sudo chmod 700 .smbcreds
+: 1721461863:0;man mount.cifs
+: 1721461907:0;smbclient -L //rsl-server.duckdns.org -U o5-13 -p 4455
+: 1721461937:0;sshfs o5-13@192.168.0.20:/home/share/o5-13_Files /mnt/SummaModusOperandi
+: 1721462013:0;ssh
+: 1721462027:0;ssh -p 4812 o5-13@192.168.0.20
+: 1721462164:0;searchp i3ipc
+: 1721462197:0;installp python310-i3ipc
+: 1721462255:0;removep python310-i3ipc
+: 1721462426:0;installp python311-i3ipc
+: 1721462456:0;i3bar
+: 1721462467:0;ka i3bar
+: 1721462658:0;sww xfce4-panel
+: 1721462772:0;ka xfce4-pa
+: 1721462774:0;ka xfce4-pane
+: 1721463250:0;i3run
+: 1721463334:0;ka xfce4-pan
+: 1721463336:0;ka xfce4-panel
+: 1721463665:0;autotiling
+: 1721463699:0;touch ~/.config/wgetrc
+: 1721463701:0;wget https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/repodata/repomd.xml.key
+: 1721463706:0;sudo rpm --import repomd.xml.key
+: 1721463718:0;sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/Emulators:Wine.repo
+: 1721463918:0;wine winecfg
+: 1721464414:0;chmod +x Wiz.desktop
+: 1721464700:0;flatpak uninstall flathub com.discordapp.Discord
+: 1721464966:0;chmod +x BetterDiscord-Linux.AppImage
+: 1721465291:0;flatpak --installations
+: 1721465323:0;cd /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
+: 1721465353:0;cd .var/app/com.spotify.Client/config/spotify
+: 1721465357:0;cat prefs
+: 1721465437:0;cpl
+: 1721466776:0;sudo chmod a+wr /usr/share/spotify
+: 1721466788:0;sudo chmod a+wr /usr/share/spotify/Apps -R
+: 1721466836:0;sudo chmod a+wr /opt/spotify7
+: 1721466837:0;sudo chmod a+wr /opt/spotify
+: 1721466843:0;sudo chmod a+wr /opt/spotify/Apps -R
+: 1721466851:0;sudo chmod a+wr /usr/share/spotify\
+sudo chmod a+wr /usr/share/spotify/Apps -R
+: 1721466893:0;cd spotify
+: 1721466932:0;curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+: 1721466964:0;spi
+: 1721466967:0;.spicetify
+: 1721466969:0;.spicetif
+: 1721466977:0;./spicetify
+: 1721466980:0;./spicetify apply
+: 1721467031:0;sudo chmod a+wr /opt/spotify\
+sudo chmod a+wr /opt/spotify/Apps -R
+: 1721467232:0;spicetify config prefs_path ~/.var/app/com.spotify.Client/config/spotify/prefs
+: 1721467508:0;cat /home/o5-14/.var/app/com.spotify.Client/config/spotify/prefs
+: 1721467524:0;cd /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share
+: 1721467717:0;gcl https://github.com/mattchrlw/dracula-for-spotify.git
+: 1721467801:0;flatpak reinstall flathub com.spotify.Client
+: 1721468065:0;nm-applet
+: 1721468203:0;searchp zsh-syntax
+: 1721468289:0;clnd
+: 1721469490:0;cd sc
+: 1721469516:0;cat winRules
+: 1721469522:0;cat keybindings
+: 1721469528:0;:q
+: 1721469531:0;cd scripts
+: 1721469543:0;sudo cp scratch /usr/local/bin
+: 1721469765:0;sudo 4;9u4;9ulcf
+: 1721470008:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+: 1721472244:0;sudo vim /etc/hostname
+: 1721472266:0;sudo vim /etc/hosts
+: 1721472295:0;sudo reboot
+: 1721472503:0;killall -q picom | wait; sww picom --config ~/.config/picom/picom.conf
+: 1721506834:0;bash wm_hopper.sh
+: 1721506841:0;upay
+: 1721507175:0;removep ristretto
+: 1721507208:0;cltr
+: 1721508011:0;installp xdotool
+: 1721508026:0;./scratch
+: 1721508031:0;./scratch 
+: 1721508100:0;./scratch FakeTM
+: 1721508731:0;bash -sh ~/.scripts/wm_hopper.sh
+: 1721508750:0;bash ~/.scripts/wm_hopper.sh
+: 1721508792:0;nf
+: 1721508795:0;nfc
+: 1721508954:0;killall -q picom | wait; picom --config ~/.config/picom/picom.conf
+: 1721509031:0;cd .config/bspwm/scripts
+: 1721509033:0;./polybar.sh
+: 1721509200:0;gcl https://github.com/phenax/bsp-layout.git
+: 1721509204:0;cd bsp-layout
+: 1721509273:0;sudo chmod +x bsp-layout
+: 1721509287:0;sudo chown o5-14:o4-14 o4-14
+: 1721509294:0;sudo chown o5-14:o4-14 o5-14
+: 1721509297:0;sudo chown o5-14:o5-14 o5-14
+: 1721509301:0;sudo chown o5-14:o5-14 bsp-layout
+: 1721509325:0;cd src
+: 1721509337:0;./install.sh
+: 1721509382:0;sudo make
+: 1721509447:0;sudo rm bsp-layout
+: 1721509461:0;sudo cp /usr/local/lib/bsp-layout/layout.sh /usr/local/bin/bsp-layout
+: 1721509473:0;sudo chmod a+x bsp-layout
+: 1721509540:0;bsp-layout
+: 1721509546:0;installp bc
+: 1721509873:0;sudo nvim scpad
+: 1721509898:0;sudo chmod +x scpad
+: 1721509998:0;cat scratch
+: 1721510126:0;sudo nvim scratch
+: 1721510195:0;sudo vim scpad
+: 1721510957:0;mkdir VirtualBox
+: 1721510960:0;cd VirtualBox
+: 1721510966:0;gcl https://github.com/R5C-V15T6AMD5S/TOS-EXPTL.git
+: 1721511055:0;searchp qemu
+: 1721511100:0;installp qemu
+: 1721511352:0;./install.sh TempleOS.iso
+: 1721548210:0;sww xed install.sh
+: 1721548260:0;./install.sh TOS.iso
+: 1721548614:0;cd confs.d
+: 1721548630:0;exit
+: 1721548737:0;cls; cat scpad
+: 1721548746:0;cls; cat scpad; cat scratch
+: 1721548797:0;ka keepassxc
+: 1721548800:0;keepassxc
+: 1721549059:0;scratch FlyingKitty
+: 1721549077:0;xdotool
+: 1721549113:0;installp xprop wmctrl
+: 1721549143:0;sudo xed /usr/local/bin/scratch
+: 1721549156:0;sudo vim /usr/local/bin/scratch
+: 1721549217:0;kitty -h
+: 1721549261:23;sudo vim scratch
+: 1721549296:0;sudo chmod +x scratch
+: 1721549355:0;sudo vim scratchpad
+: 1721549380:0;scratch
+: 1721549396:0;sudo chmod +x scratchpad
+: 1721549518:0;scratchpad
+: 1721550354:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+: 1721550374:0;cd ~/.local/share/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/
+: 1721550392:0;cd /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/
+: 1721550456:0;sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify\
+sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1721550480:0;cd ~
+: 1721550585:0;sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
+: 1721550591:0;udo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1721550594:0;sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1721550615:0;spicetify update
+: 1721550747:0;spicetify backup
+: 1721550854:0;spicetify backup apply
+: 1721550967:0;spicetify app
+: 1721551016:0;cat .config/zsh/.aliases
+: 1721551037:0;spicetify config current_theme Dracula && spicetify apply
+: 1721551044:0;spicetify config current_theme Dracula; spicetify apply
+: 1721551081:0;searchp spotify
+: 1721551320:0;todo add "GR - 3.09."
+: 1721551421:0;sudo zypper install nodejs npm\
+
+: 1721551432:0;sudo npm install -g spicetify-cli\
+
+: 1721551491:0;wget https://github.com/spicetify/spicetify-cli/releases/download/v2.14.1/spicetify-2.14.1-linux-x86_64.zip\
+
+: 1721551570:0;sudo mv spicetify /usr/local/bin/\
+sudo chmod +x /usr/local/bin/spicetify
+: 1721551591:0;spicetify
+: 1721551602:0;nano ~/.config/spicetify/config-xpui.ini\
+
+: 1721551660:0;spicetify backup apply\
+
+: 1721551681:0;update-spicetify
+: 1721551701:0;flatpak run com.spotify.Client
+: 1721551805:0;spicetify apply
+: 1721551813:0;sdct
+: 1721551858:0;cd /usr/local/bin
+: 1721551868:0;sudo rm spicetify
+: 1721551908:0;flatpak uninstall flathub com.spotify.Client
+: 1721551951:0;cd /var/run
+: 1721551985:0;flatpak install flathub com.spotify.Client
+: 1721552269:0;installp opi
+: 1721552286:0;opi codecs
+: 1721552317:0;removep opi
+: 1721552326:0;sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
+: 1721552335:0;sudo zypper refresh
+: 1721552350:0;sudo zypper dist-upgrade --from packman --allow-vendor-change
+: 1721552414:0;sudo zypper install --from packman ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec
+: 1721554541:0;cd VirtualBox/TempleOS
+: 1721554678:0;rm TOS.img
+: 1721554680:0;rm TOS.iso
+: 1721554714:0;qemu-system-x86_64 -enable-kvm -cdrom ./TempleOS.iso -m 512 
+: 1721554819:0;sudo zypper install libvirt qemu virt-manager libvirt-daemon-driver-qemu qemu-kvm
+: 1721554913:0;rrm TempleOS
+: 1721554917:0;git clone https://github.com/R5C-V15T6AMD5S/TOS-EXPTL.git
+: 1721554935:0;cd TOS-EXPTL
+: 1721554953:0;chmod +x install.sh mount.sh new-folder.sh run.sh sync.sh config.sh
+: 1721554966:0;rrm .git
+: 1721554985:0;./install.sh TOS.img
+: 1721555130:0;cd Themes
+: 1721555142:0;cp Theme_Gruvbox.HC Theme_Dracula.HC
+: 1721555146:0;xed Theme_Dracula.HC
+: 1721555621:0;./sync.sh temple ./TOS.img
+: 1721555629:0;./run.sh TOS.img
+: 1721556017:0;bash
+: 1721556448:0;urar
+: 1721556504:0;utar
+: 1721556524:0;searchp unrar
+: 1721556540:0;installp unrar
+: 1721556556:0;swp
+: 1721556669:0;uzip
+: 1721556737:0;vim
+: 1721556741:0;nvim
+: 1721556747:0;e
+: 1721556758:0;nvim 
+: 1721556774:0;vim .
+: 1721556779:0;nvim .
+: 1721556793:0;searchp nemo
+: 1721556889:0;installp nemo nemo-extension-image-converter nemo-extension-preview nemo-extension-fileroller
+: 1721563907:0;searchp steam
+: 1721563925:0;installp steam
+: 1721565304:0;sww autotiling
+: 1721569603:0;cd .config/mpv
+: 1721569613:0;nvim mpv.conf
+: 1721570051:0;git clone https://github.com/dracula/zathura ~/.config/zathura/\
+
+: 1721570114:0;nvim zathurarc
+: 1721570482:0;cd Documents/PDFs
+: 1721570488:0;zathura CIA-RDP96-00788R001700210016-5.pdf
+: 1721586149:0;killall -q picom | wait; picom
+: 1721589397:0;cd Documents
+: 1721590479:0;rsl-smb
+: 1721590514:0;cat .config/zsh/.functions
+: 1721599927:0;killall -q picom | wait; sww picom
+: 1721600391:0;sudo systemctl restart remote-fs.target
+: 1721600401:0;sudo systemctl enable remote-fs.target
+: 1721600483:0;killall -q picom | wait; picom --config ~/.config/picom/picom.conf &
+: 1721600583:0;./SingleMon.sh
+: 1721600599:0;clccf
+: 1721600752:0;searchp gail
+: 1721600783:0;installp libabigail-tools
+: 1721600804:0;fzf
+: 1721600821:0;searchp atk-
+: 1721600840:0;installp libatk-bridge-2_0-0 
+: 1721600851:0;~/.config/i3/scripts/monitor_init.sh
+: 1721600926:0;searchp adaptor
+: 1721601145:0;rsl-ssh
+: 1721601202:0;rsl-scp o5-13 ~/GiftFromAFriend.jpg
+: 1721601244:0;rsl-scp o5-13 /GiftFromAFriend.jpg
+: 1721601269:0;rsl-scp o5-13 05-13/GiftFromAFriend.jpg
+: 1721601281:0;rsl-scp o5-13 o5-13/GiftFromAFriend.jpg
+: 1721601290:0;cd Public
+: 1721601453:0;sudo cat /etc/fstab
+: 1721601525:0;edit-grub
+: 1721601603:0;pg rsl-server.duckdns.org
+: 1721601634:0;swp Open\ Source\ Initiative.png
+: 1721601697:0;rsl status
+: 1721601723:0;rsl scp o5-13 o5-13/GiftFromAFriend.jpg
+: 1721601763:0;rsl smb
+: 1721601775:0;rsl ssh
+: 1721602672:0;gcl https://github.com/mtwb47/startpage.git
+: 1721602926:0;chmod +x .
+: 1721602933:0;./wm_hopper.sh
+: 1721602945:0;./screen7
+: 1721602947:0;./screen_layouts
+: 1721603074:0;./search_engines.sh
+: 1721603260:0;cd .scripts
+: 1721603263:0;./monitors.sh
+: 1721603273:0;nvim monitors.sh
+: 1721603310:0;screen_lay
+: 1721603384:0;searchp light
+: 1721603550:0;xbacklight -5
+: 1721603633:0;c; sudo find /sys/ -type f -iname '*brightness*'
+: 1721603705:0;c; find /sys -type f -name brightness
+: 1721603837:0;find /sys -type f -name brightness
+: 1721603891:0;sudo ln -s /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/drm/card1/card1-eDP-1/amdgpu_bl1/brightness /sys/class/brightness
+: 1721603937:0;sudo vim /etc/X11/xorg.conf.install
+: 1721604096:0;xbacklight -inc 5
+: 1721604100:0;xbacklight 
+: 1721604101:0;xbacklight
+: 1721604103:0;xbacklight -h
+: 1721604111:0;xbacklight -set 10
+: 1721604118:0;xbacklight -dis
+: 1721604120:0;xbacklight -d
+: 1721604124:0;xbacklight -d eDP-1
+: 1721604220:0;gcl https://github.com/haikarainen/light.git
+: 1721604724:0;installp redshift
+: 1721604762:0;installp redshift-gtk
+: 1721604843:0;geoclue2
+: 1721604856:0;searchp geoclue2
+: 1721604870:0;installp geoclue2
+: 1721604901:0;chmod +x autostart
+: 1721605076:0;killall -q picom; picom --experimental-backends --backend glx &\
+
+: 1721605083:0;killall -q picom; picom --experimental-backend\
+
+: 1721605084:0;killall -q picom; picom --experimental-backends\
+
+: 1721605111:0;killall -q picom; picom &
+: 1721605171:0;cd .config/herbstluftwm
+: 1721605173:0;nvim autostart
+: 1721605194:0;cat .config/i3/confau
+: 1721605199:0;cat .config/i3/confs.d/autostart.conf
+: 1721605218:0;./autostart
+: 1721605255:1;picom --config ~/.config/picom/picom.conf
+: 1721605293:0;cd .config/picom
+: 1721605297:0;vim picom.conf
+: 1721605351:0;sww picom --config ~/.config/picom/picom.conf
+: 1721605592:0;christmas-tree
+: 1721631164:0;cd red
+: 1721631170:0;mkd redshift
+: 1721631233:0;redshift -O 3700
+: 1721631252:0;nvim redshift.conf
+: 1721631257:0;redshift -x
+: 1721631347:0;redhsift
+: 1721631351:0;sww redshift
+: 1721631354:0;sww redshift-gtk
+: 1721634110:0;cd .config/i3/monitors
+: 1721634165:0;sww ./TVMonR.sh
+: 1721634169:0;./TVMonR.sh
+: 1721634265:0;cat sds.sh
+: 1721634300:0;sh TVMonR.sh
+: 1721634371:0;nitrogen --restore
+: 1721634401:0;cd Pictures/WallPP/Colorschemes/dracula/Misc/
+: 1721634404:0;swp ouroboros.png
+: 1721647165:0;tclock
+: 1721647171:0;tty-clock
+: 1721647176:0;searchp tty-clock
+: 1721678927:0;ca va
+: 1721678928:0;cav a
+: 1721679807:0;sudo vim /etc/zypp/zypp.conf
+: 1721680062:0;rd
+: 1721681815:0;sww picom --config ~/.config/picom/picom.conf &
+: 1721681832:0;redshift -c ~/.config/redshift/redshift.conf
+: 1721681944:0;cp .config/redshift/redshift.conf .config/
+: 1721681949:0;redshift
+: 1721682165:0;xfce4-power-manager
+: 1721682173:0;sww xfce4-power-manager
+: 1721682181:0;ka xfce4-power-manager
+: 1721682427:0;htop
+: 1721683458:0;searchp rofi-calc
+: 1721683479:0;installp rofi-calc
+: 1721683491:0;cd .config/rofi
+: 1721683494:0;e .
+: 1721683514:0;rofi-calc
+: 1721683546:0;zypper in rofi rofi-devel qalculate
+: 1721683551:0;sudo zypper in rofi rofi-devel qalculate
+: 1721683605:0;removep rofi-calc
+: 1721683615:0;git clone https://github.com/svenstaro/rofi-calc.git
+: 1721683624:0;cd rofi-calc
+: 1721683631:0;mkdir m4
+: 1721683635:0;autoreconf -i
+: 1721683646:0;mkd build
+: 1721683650:0;../.configure
+: 1721683653:0;../configure
+: 1721683657:0;make
+: 1721683660:0;make install
+: 1721683663:0;sudo make install
+: 1721683675:0;cd ../ ..
+: 1721683771:0;installp lf
+: 1721683796:0;cd .config
+: 1721683805:0;rrm dosbox
+: 1721683810:0;rrm Electron
+: 1721683840:0;mkd lf
+: 1721683869:0;nvim icons
+: 1721683958:0;lf -config /dev/null
+: 1721684088:0;nvim lfrc
+: 1721684089:0;lf
+: 1721684284:0;rrm lf
+: 1721684293:0;removep lf
+: 1721686477:0;echo 10 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1721686538:0;sudo echo 10 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1721686594:0;searchp brightnessctl
+: 1721686611:0;installp brightnessctl
+: 1721686638:0;brightnessctl get
+: 1721686746:0;brightnessctl m
+: 1721686748:0;brightnessctl s
+: 1721686752:0;brightnessctl s 200
+: 1721686824:0;brightnessctl s +10%
+: 1721686832:0;brightnessctl s -10%
+: 1721686837:0;brightnessctl s 10%-
+: 1721686876:0;brightnessctl i
+: 1721686896:0;brightnessctl g
+: 1721687011:0;brightnessctl s -5%
+: 1721687023:0;brightnessctl s 5%-
+: 1721687027:0;brightnessctl s +5%
+: 1721687281:0;run--tos
+: 1721687374:0;removep icewm
+: 1721687403:0;removep dosbox
+: 1721687650:0;removep gigolo
+: 1721688998:0;cd Desktop/RiTeh\ UNIRI
+: 1721689004:0;mkd 4.7
+: 1721689008:0;mkd RWA
+: 1721689162:0;xfdesktop
+: 1721689170:0;sww xfdesktop
+: 1721689602:0;cd Pictures/WallPP/Colorschemes/dracula
+: 1721689605:0;la
+: 1721689609:0;cd Misc
+: 1721689615:0;swp ae86_waifu.png
+: 1721689625:0;ka xfdesktop
+: 1721689658:0;swp Dracula-Cat-Orange.png
+: 1721689663:0;cd ..
+: 1721689669:0;cd OS
+: 1721689709:0;src
+: 1721689711:0;c
+: 1721689713:0;ll
+: 1721689719:0;las
+: 1721689720:0;lsa
+: 1721689726:0;ls
+: 1721689727:0;c;lsa
+: 1721722766:0;sudo vim /etc/systemd/system.conf.d
+: 1721722864:0;sudo vim /etc/fstab
+: 1721722892:0;sudo systemctl deamon-reload
+: 1721722900:0;sudo systemctl daemon-reload
+: 1721722912:0;grep -E 'noauto|systemd' /etc/fstab
+: 1721722937:0;sudo umount /mnt/SummaModusOperandi
+: 1721722944:0;sudo mount -a
+: 1721723864:0;cd Tools
+: 1721723871:0;chmod +x balenaEtcher.AppImage
+: 1721723873:0;./BetterDiscord-Linux.AppImage
+: 1721725033:0;rsl scp o5-13 /home/o5-13/GiftFromAFriend.jpg
+: 1721725952:0;cp 1c316a33b8642b26.png ~/Pictures/ProfilePics
+: 1721725958:0;cp image.png ~/Pictures/ProfilePics
+: 1721725967:0;cd ~/Pictures/ProfilePics
+: 1721778046:0;swp bj_efla.jpg
+: 1721778087:0;rm image.png
+: 1721778093:0;rm bojack-horseman-escape-from-la-silhouette-uv3pd60u1e4hk70w.webp
+: 1721846678:0;xkill
+: 1721846904:0;sww pciom
+: 1721846908:0;sww picom
+: 1721846967:0;searchp wwinetricks
+: 1721846970:0;searchp winetricks
+: 1721847031:0;installp winetricks
+: 1721847039:0;clear
+: 1721847292:0;winecfg
+: 1721847449:0;sh ~/.config/i3/monitors/SingleMon.sh
+: 1721847454:0;arandr
+: 1721847660:0;wine explorer
+: 1721847721:0;c; searchp wine-mono
+: 1721847739:0;installp wine-mono
+: 1721847746:0;c; searchp wine-gecko
+: 1721847958:0;searchp wine-stable
+: 1721848275:0;wineserver -k\
+
+: 1721848279:0;which wine
+: 1721848282:0;which wineserver
+: 1721848292:0;ps -aux | grep wine\
+
+: 1721848305:0;kill -9 4172
+: 1721848311:0;kill -9 6584
+: 1721848436:0;cd Games/GTA\ Vice\ City
+: 1721848438:0;wine gta-vc.exe
+: 1721848486:0;source ~/.config/zsh/.zshrc
+: 1721848497:0;wine Games/GTA\ Vice\ City/gta-vc.exe
+: 1721848506:0;removep wine-staginf
+: 1721849443:0;sudo zypper refresh\
+sudo zypper update wine\
+
+: 1721849457:0;sudo zypper install winetricks\
+winetricks d3dx9 vcrun6 corefonts\
+
+: 1721849567:0;WINEPREFIX=~/.local/share/wine wine Games/GTA\ San\ Andreas/gta_sa.exe
+: 1721849586:0;wine Games/GTA\ San\ Andreas/gta_sa.exe
+: 1721849630:0;removep wine
+: 1721849998:0;searchp wine-staging
+: 1721850088:0;installp wine-staging-wow64
+: 1721850185:0;installp wine
+: 1721851445:0;searchp wine
+: 1721851684:0;sudo zypper rr Emulators_Wine
+: 1721851698:0;cd Downloads
+: 1721851702:0;sudo zypper lr
+: 1721851748:0;sudo cp Emulators_Wine.repo /etc/zypp/repos.d
+: 1721851794:0;sudo zypper in --force wine-stagibg
+: 1721851799:0;sudo zypper in --force wine-staging
+: 1721851819:0;removep wine-staging
+: 1721851838:0;c; searchp wine
+: 1721851852:0;removep wine-gecko wine-staging-32bit
+: 1721851870:0;installp wine-staging
+: 1721851931:0;sww winecfg
+: 1721999839:0;sudo zypper dup
+: 1721999999:0;q
+: 1722000007:0;zypper ps -s
+: 1722000009:0;sudo zypper ps -s
+: 1722000071:0;upday
+: 1722000098:0;cava
+: 1722000102:0;clnf
+: 1722000104:0;clcf\
+
+: 1722000107:0;clnf
+: 1722006736:0;cls
+: 1722006741:0;./start-flashpoint.sh
+: 1722086386:0;upda<y
+: 1722086388:0;upday
+: 1722086560:0;cava
+: 1722086562:0;clcf
+: 1722086563:0;clnf
+: 1722093222:0;sudo zypper dup --allow-vendor-change
+: 1722095158:0;run-tos
+: 1722096856:0;searchp nsx
+: 1722096978:0;searchp sxiv
+: 1722097015:0;installp sxiv
+: 1722097054:0;sxiv -a 1712969659432747.gif
+: 1722097083:0;r
+: 1722097373:0;searchp thunar
+: 1722097832:0;ka nemo
+: 1722097836:0;ka thunar
+: 1722108674:0;todo add "Poker flash game"
+: 1722108675:0;q
+: 1722173565:0;upday
+: 1722173659:0;sudo zypper ps -s
+: 1722173667:0;reboot
+: 1722173669:0;sudo reboot
+: 1722173721:0;upday
+: 1722173766:0;cava
+: 1722173768:0;clcf
+: 1722173770:0;clnf
+: 1722258309:0;upday
+: 1722258360:0;cava
+: 1722258362:0;clcf
+: 1722258364:0;clnf
+: 1722273083:0;sww picom
+: 1722273090:0;cava
+: 1722273092:0;clcf
+: 1722273093:0;clnf
+: 1722278756:0;todo rm 1
+: 1722317795:0;upday
+: 1722318791:0;cava
+: 1722318793:0;clcf
+: 1722318794:0;clnf
+: 1722324612:0;ar5N10HBost187ă�ž
+: 1722324613:0;upday
+: 1722324633:0;cava
+: 1722324635:0;clcf
+: 1722324636:0;clnf
+: 1722328511:0;installp pinta
+: 1722333010:0;cava
+: 1722333011:0;clcf
+: 1722333013:0;clnf
+: 1722334296:0;sww picom
+: 1722341636:0;cava
+: 1722341638:0;clcf
+: 1722341639:0;clnf
+: 1722348900:0;sww picom
+: 1722356091:0;cava
+: 1722356092:0;clcf
+: 1722356094:0;clnf
+: 1722433397:0;upday
+: 1722433682:0;reboot
+: 1722433684:0;sudo reboot
+: 1722433738:0;cava
+: 1722433739:0;clcf
+: 1722433741:0;clnf
+: 1722488770:0;upday
+: 1722489471:0;cava
+: 1722489473:0;clcf
+: 1722489474:0;clnf
+: 1722498537:0;cava
+: 1722498538:0;clcf
+: 1722498540:0;clnf
+: 1722509824:0;searchp numlock
+: 1722509847:0;installp numlockx
+: 1722511837:0;tclock
+: 1722511839:0;clcf
+: 1722546024:0;sww picom
+: 1722546031:0;cava
+: 1722546033:0;clcf
+: 1722546036:0;clnf
+: 1722581080:0;upday
+: 1722583393:0;cava
+: 1722583394:0;clcf
+: 1722583400:0;sudo zypper ps -s
+: 1722583422:0;reboot
+: 1722583425:0;sudo reboot
+: 1722583483:0;cava
+: 1722583484:0;clcf
+: 1722583486:0;clnf
+: 1722694990:0;ay
+: 1722694992:0;upday
+: 1722695178:0;reboozt
+: 1722695181:0;sudo reboot
+: 1722695302:0;cava
+: 1722695303:0;clcf
+: 1722695305:0;clnf
+: 1722777852:0;upday
+: 1722777926:0;sudo zypper ps -s
+: 1722777932:0;sww picom
+: 1722777948:0;cava
+: 1722777950:0;clcf
+: 1722777951:0;clnf
+: 1722781876:0;fastfetch
+: 1722781882:0;installp fastfetch
+: 1722781937:0;clear;fastfetch
+: 1722781949:0;clear;neofetch
+: 1722781952:0;fastfetch
+: 1722781989:0;cd .config
+: 1722781990:0;cls
+: 1722782007:0;mkd fastfetch
+: 1722782017:0;nvim config.jsonc
+: 1722782042:0;fastfetch
+: 1722782047:0;nvim config.jsonc
+: 1722782157:0;clear;fastfetch
+: 1722782333:0;neofetch
+: 1722782340:0;clear;fastfetch;neofetch
+: 1722782875:0;removep neofetch
+: 1722782899:0;cd .config
+: 1722782901:0;rrm neofetch
+: 1722782943:0;clff
+: 1722783749:0;fastfetch --list-logos
+: 1722783791:0;clff
+: 1722783887:0;cava
+: 1722783890:0;clcf
+: 1722783891:0;clff
+: 1722838307:0;sww picom
+: 1722838308:0;upday
+: 1722838367:0;cava
+: 1722838371:0;clcf
+: 1722838376:0;clff
+: 1722846198:0;sww picom
+: 1722846199:0;cava
+: 1722846200:0;clcf
+: 1722846202:0;clff
+: 1722851472:0;flatpak install flathub io.github.mimbrero.WhatsAppDesktop
+: 1722852793:0;removep sxiv
+: 1722852829:0;searchp risetto
+: 1722852847:0;searchp riset
+: 1722852851:0;searchp ris
+: 1722852868:0;installp ristretto
+: 1722862829:0;cava
+: 1722862834:0;clcf
+: 1722862836:0;clnf
+: 1722862838:0;clff
+: 1722862844:0;cava
+: 1722862847:0;clcf
+: 1722862849:0;clnf
+: 1722862851:0;clcf
+: 1722862853:0;clff
+: 1722865816:0;searchp thorium
+: 1722865964:0;searchp browser
+: 1722866692:0;curlž
+: 1722866693:0;curl
+: 1722866702:0;\
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+: 1722866713:0;\
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+: 1722866723:0;sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+: 1722866729:0;sudo zypper install brave-browser
+: 1722867069:0;xprop
+: 1722867076:0;clear;probe
+: 1722868936:0;cava
+: 1722869036:0;sww picom
+: 1722869048:0;cava
+: 1722869061:0;clcf
+: 1722869063:0;clff
+: 1722871949:0;nitrogen --restore
+: 1722872001:0;arandr
+: 1722872181:0;cava
+: 1722872182:0;clcf
+: 1722872184:0;clff
+: 1722924527:0;upday
+: 1722924868:0;reboot
+: 1722924870:0;sudo reboot
+: 1722926200:0;cava
+: 1722926201:0;clcf
+: 1722926202:0;clnf
+: 1722926207:0;clff
