@@ -14,7 +14,7 @@
 - Shell: `zsh`
 - Terminal: `kitty`
 - Text editor: `nvim`
-- Browser: `firefox`
+- Browser: `brave`
 - Compositor: `picom`
-- File manager: `nemo`
+- File manager: `thunar`
 - WMs: `i3`, `herbstluftwm` or `bspwm`
