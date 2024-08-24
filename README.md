@@ -17,4 +17,3 @@
 - Browser: `brave`
 - Compositor: `picom`
 - File manager: `thunar`
-- WMs: `i3`, `herbstluftwm` or `bspwm`
