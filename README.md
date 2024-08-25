@@ -4,10 +4,10 @@
 ![Screenshot](./Screenshot/i3.png)
 
 <!--## XFCE + herbstluftwm
-![Screenshot](./Screenshots/herbstluftwm.png)-->
+![Screenshot](./Screenshot/herbstluftwm.png)-->
 
 ## XFCE + bspwm
-![Screenshot](./Screenshots/bspwm.png)
+![Screenshot](./Screenshot/bspwm.png)
 
 ## Specifications
 
