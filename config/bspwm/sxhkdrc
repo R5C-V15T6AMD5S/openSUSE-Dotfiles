@@ -28,10 +28,10 @@ XF86AudioPrev
     playerctl previous
 
 XF86MonBrightnessUp    
-    light -A 5
+    brightnessctl s +5%
 
 XF86MonBrightnessDown 
-    light -U 5
+    brightnessctl s 5%-
 
 XF86AudioLowerVolume
     pactl -- set-sink-volume @DEFAULT_SINK@ -5%
@@ -60,11 +60,11 @@ super + {comma, period}
 
 #### Most used apps ####
 #----------------------#
-super + {F4, Return}
-    {xkill, kitty} 
+super + {F4, Return, b}
+    {xkill, kitty, firefox} 
 
-super + shift + {t, f, b, Escape}
-    {xed, nemo, firefox, xfce4-taskmanager}
+super + shift + {t, f, n, b, Escape}
+    {xed, thunar, nemo, brave-browser --incognito, xfce4-taskmanager}
 
 
 #### Screenshots ####
@@ -113,7 +113,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 #### ROFI & friends ####
 #----------------------#
-super + {b, n, d, ctrl + c}
+super + {b, ctrl + n, ctrl + d, ctrl + c}
     {~/.scripts/search_engines.sh, ~/.scripts/rofi-network-manager.sh, rofi -show, clipmenu}
 
 
