@@ -3,8 +3,8 @@
 ## XFCE + i3
 ![Screenshot](./Screenshot/i3.png)
 
-<!--## XFCE + herbstluftwm
-![Screenshot](./Screenshot/herbstluftwm.png)-->
+## XFCE + herbstluftwm
+![Screenshot](./Screenshot/herbstluftwm.png)
 
 ## XFCE + bspwm
 ![Screenshot](./Screenshot/bspwm.png)
@@ -14,6 +14,6 @@
 - Shell: `zsh`
 - Terminal: `kitty`
 - Text editor: `nvim`
-- Browser: `brave`
+- Browser: `firefox`
 - Compositor: `picom`
 - File manager: `thunar`
