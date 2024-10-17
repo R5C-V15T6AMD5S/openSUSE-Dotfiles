@@ -4,7 +4,7 @@
 ![Screenshot](./Screenshot/i3.png)
 
 ## XFCE + herbstluftwm
-![Screenshot](./Screenshot/herbstluftwm.png)
+![Screenshot](./Screenshot/hlwm.png)
 
 ## XFCE + bspwm
 ![Screenshot](./Screenshot/bspwm.png)
