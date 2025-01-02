@@ -3,11 +3,11 @@
 ## XFCE + i3
 ![Screenshot](./Screenshot/i3.png)
 
-## XFCE + herbstluftwm
+<!-- ## XFCE + herbstluftwm
 ![Screenshot](./Screenshot/hlwm.png)
 
 ## XFCE + bspwm
-![Screenshot](./Screenshot/bspwm.png)
+![Screenshot](./Screenshot/bspwm.png) -->
 
 ## Specifications
 
@@ -17,3 +17,4 @@
 - Browser: `firefox`
 - Compositor: `picom`
 - File manager: `thunar`
+- PDF Reader: `zathura`
