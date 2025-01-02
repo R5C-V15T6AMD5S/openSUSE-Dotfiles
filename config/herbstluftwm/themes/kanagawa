@@ -1,7 +1,0 @@
-# Kanagawa #
-#----------#
-Active='#DCD7BA'
-Normal='#223249'
-Urgent='#E82424'
-Floating=$Active
-
