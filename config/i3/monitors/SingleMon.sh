@@ -1,5 +1,7 @@
 #!/bin/sh
 
-xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rate 60 --rotate normal  --output HDMI-1 --off &
+xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal  --output HDMI-1 --off &
+
+pactl set-default-sink alsa_output.pci-0000_04_00.6.analog-stereo
 
 nitrogen --restore &
