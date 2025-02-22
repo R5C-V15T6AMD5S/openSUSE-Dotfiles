@@ -12,109 +12,186 @@ function gogh() {
 	   bash -c  "$(wget -qO- https://git.io/vQgMr)"
 }
 
+# Start an app & disown it
+function nhd() {
+    nohup "$@" > /dev/null 2>&1 &
+    disown
+}
+
 # Create a new directory and enter it
 function mkd() {
    	mkdir -p "$@" && cd "$_";
 }
 
-function extr() {
-  if [[ $# != 2 ]]; then
-    echo "Usage: extr <FILE_NAME> <FILE_TYPE>"
+# File types controls 
+function fta() {
+  if [[ $# != 3 ]]; then
+    echo "Usage: fta <FOLDER_NAME> <0 = extract, 1 = compress> <FILE_TYPE>"
     return 1
   fi
 
-  local file_name=$1
-  local file_type=$2
+  local folder_name=$1
+  local action=$2
+  local file_type=$3
+  local target
 
-  case "$file_type" in
-    "zip")
-      target="${file_name%.zip}"
-      unzip "$file_name" -d "${target##*/}"
-      ;;
-    "tar")
-      tar -xvf "$file_name"
-      ;;
-    "tar.gz")
-      tar -xzvf "$file_name"
-      ;;
-    "tar.bz2")
-      tar -xjvf "$file_name"
-      ;;
-    "gz")
-      gunzip "$file_name"
-      ;;
-    "bz2")
-      bunzip2 "$file_name"
-      ;;
-    "rar")
-      unrar x "$file_name"
-      ;;
-    "7z")
-      7z x "$file_name"
-      ;;
-    "iso")
-      mount_dir="${file_name%.iso}_mount"
-      mkdir -p "$mount_dir"
-      sudo mount -o loop "$file_name" "$mount_dir"
-      ;;
-    "riso")
-      mount_dir="${file_name%.iso}_mount"
-      if mountpoint -q "$mount_dir"; then
-          sudo umount "$mount_dir"
-          rmdir "$mount_dir"
-          echo "ISO unmounted and $mount_dir removed"
-      else
-          echo "$mount_dir is not mounted"
-      fi
-      ;;
-    *)
-      echo "ERROR: Unknown file type $file_type"
-      return 1
-      ;;
-  esac
+  if [[ "$action" == "0" ]]; then
+    # Extracting files
+    case "$file_type" in
+      "zip")
+        target="${folder_name%.zip}"
+        unzip "$folder_name" -d "${target##*/}"
+        ;;
+      "tar")
+        tar -xvf "$folder_name"
+        ;;
+      "tar.gz")
+        tar -xzvf "$folder_name"
+        ;;
+      "tar.bz2")
+        tar -xjvf "$folder_name"
+        ;;
+      "gz")
+        gunzip "$folder_name"
+        ;;
+      "bz2")
+        bunzip2 "$folder_name"
+        ;;
+      "rar")
+        unrar x "$folder_name"
+        ;;
+      "7z")
+        7z x "$folder_name"
+        ;;
+      "iso")
+        mount_dir="${folder_name%.iso}_mount"
+        mkdir -p "$mount_dir"
+        sudo mount -o loop "$folder_name" "$mount_dir"
+        ;;
+      *)
+        echo "ERROR: Unknown file type $file_type for extraction"
+        return 1
+        ;;
+    esac
+    
+  elif [[ "$action" == "1" ]]; then
+    # Compressing files
+    case "$file_type" in
+      "zip")
+        zip -r "${folder_name}.zip" "$folder_name"
+        ;;
+      "tar")
+        tar -cvf "${folder_name}.tar" "$folder_name"
+        ;;
+      "tar.gz")
+        tar -czvf "${folder_name}.tar.gz" "$folder_name"
+        ;;
+      "tar.bz2")
+        tar -cjvf "${folder_name}.tar.bz2" "$folder_name"
+        ;;
+      "gz")
+        gzip "$folder_name"
+        ;;
+      "bz2")
+        bzip2 "$folder_name"
+        ;;
+      "rar")
+        rar a "${folder_name}.rar" "$folder_name"
+        ;;
+      "7z")
+        7z a "${folder_name}.7z" "$folder_name"
+        ;;
+      *)
+        echo "ERROR: Unknown file type $file_type for compression"
+        return 1
+        ;;
+    esac
+  else
+    echo "ERROR: Invalid action. Use 0 for extract or 1 for compress."
+    return 1
+  fi
 }
 
-
-
+# Controlling the home server
+# 0 = LAN, 1 = DDNS
 function rsl() {
     case "$1" in
         status)
             bash -c "~/.scripts/home_server_status.sh"
             ;;
         scp-get)
-            if [ -z "$2" ] || [ -z "$3" ]; then
-                echo "Usage: rsl scp <user> <remote_path>"
+            if [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
+                echo "Usage: rsl scp-get <0|1> <user> <full_remote_path>"
                 return 1
             fi
-            scp -P 4812 "$2@rsl-server.duckdns.org:$3" ~/Public/
+            if [ "$2" = "0" ]; then
+                scp -P 4812 "$3@192.168.0.93:$4" ~/Public/
+            elif [ "$2" = "1" ]; then
+                scp -P 4812 "$3@rsl-server.duckdns.org:$4" ~/Public/
+            else
+                echo "Invalid connection type: use 0 for LAN or 1 for remote DDNS."
+                return 1
+            fi
             ;;
         scp-send)
-            if [ -z "$2" ] || [ -z "$3" ]; then
-                echo "Usage: rsl scp-send <local_file> <remote_user>:<remote_path>"
+            if [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
+                echo "Usage: rsl scp-send <0|1> <local_file> <remote_user>:<full_remote_path>"
                 return 1
             fi
-            scp -P 4812 "$2" "$3@rsl-server.duckdns.org:$3"
-            ;;
-        smb)
-            sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,port=4455
+            if [ "$2" = "0" ]; then
+                scp -P 4812 "$3" "$4@192.168.0.93:$5"
+            elif [ "$2" = "1" ]; then
+                scp -P 4812 "$3" "$4@rsl-server.duckdns.org:$5"
+            else
+                echo "Invalid connection type: use 0 for LAN or 1 for remote DDNS."
+                return 1
+            fi
             ;;
         ssh)
-            if [ -z "$2" ]; then
-                echo "Usage: rsl ssh <remote_user>"
+            if [ -z "$2" ] || [ -z "$3" ]; then
+                echo "Usage: rsl ssh <0|1> <remote_user>"
                 return 1
             fi
-            ssh -p 4812 "$2"@rsl-server.duckdns.org
+            if [ "$2" = "0" ]; then
+                ssh -p 4812 "$3"@192.168.0.93
+            elif [ "$2" = "1" ]; then
+                ssh -p 4812 "$3"@rsl-server.duckdns.org
+            else
+                echo "Invalid connection type: use 0 for LAN or 1 for remote DDNS."
+                return 1
+            fi
+            ;;
+        smb)
+            if [ -z "$2" ]; then
+                echo "Usage: rsl smb <0|1|2>"
+                return 1
+            fi
+            if [ "$2" = "0" ]; then
+                sudo mount -t cifs //192.168.0.93/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,uid=1000,gid=1000,port=4455
+                sudo mount -t cifs //192.168.0.93/Share-minecraft /mnt/MinecraftServer -o rw,_netdev,credentials=/home/o5-14/.mcscreds,x-systemd.automount,uid=1000,gid=1000,port=4455
+            elif [ "$2" = "1" ]; then
+                sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,uid=1000,gid=1000,port=4455
+                sudo mount -t cifs //rsl-server.duckdns.org/Share-minecraft /mnt/MinecraftServer -o rw,_netdev,credentials=/home/o5-14/.mcscreds,x-systemd.automount,uid=1000,gid=1000,port=4455
+            elif [ "$2" = "2" ]; then
+                sudo umount /mnt/SummaModusOperandi
+                sudo umount /mnt/MinecraftServer
+            else
+                echo "Invalid option: use 0 for LAN, 1 for remote DDNS, 2 for unmounting them"
+                return 1
+            fi
             ;;
         irc)
             irs -c rsl-server.duckdns.org -p 6667
             ;;
         *)
-            echo "Usage: rsl {status|scp-get|scp-send|smb|ssh|irc}"
+            echo "Usage: rsl {status|scp-get|scp-send|ssh|smb|irc}"
             return 1
             ;;
     esac
 }
 
+
+# Simple QEMU shortcuts
 function qemu-run() {
     case "$1" in
         tos)
@@ -123,14 +200,49 @@ function qemu-run() {
         wxp)
             cd ~/VirtualBox/WXPP; ./run.sh ./WXPP.img
             ;;
+        t10)
+            cd ~/VirtualBox/T10; ./run.sh ./T10.img
+            ;;
         kali)
-            cd ~/VirtualBox/KaliLinux; ./run.sh ./KL.qcow2
+            cd ~/VirtualBox/KL; ./run.sh ./KL.qcow2
             ;;
         *)
-            echo "Usage: qemu-run {tos|wxp|kali}"
+            echo "Usage: qemu-run {tos|wxp|t10|kali}"
             return 1
             ;;
     esac
+}
+
+# Simple common app aliases
+function cma() {
+    case "$1" in 
+        paint)
+            nhd pinta ~/Pictures/canvas.png
+            exit 0
+            ;;
+        tracker)
+            cd ~/Tools/MilkyTracker; nhd ./MilkyTracker.AppImage
+            exit 0
+            ;;
+        factorio)
+            cd ~/Games/Factorio/bin/x64; nhd ./factorio
+            exit 0
+            ;;
+        minecraft)
+            cd ~/.tlauncher; nhd java -jar TLauncher.jar 
+            exit 0
+            ;;            
+        *)
+            echo "ERROR: Wrong entry"
+            echo "Usage: cma {paint|tracker|factorio|minecraft}"
+            return 1
+            ;;
+    esac
+}
+
+
+function christmas-tree() {
+    curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash
 }
 
 #function update-grub() {
@@ -138,7 +250,7 @@ function qemu-run() {
 # UEFI
 #      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 # BIOS
-      #sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+#      sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 #}
 
 # Updates the spicetify 
