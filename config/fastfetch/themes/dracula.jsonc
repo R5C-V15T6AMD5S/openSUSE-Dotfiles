@@ -1,0 +1,55 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "opensuse_small",
+        "padding": {
+            "right": 4
+        }
+    },
+    "display": {
+        "separator": "  ~  "
+    },
+    "modules": [
+        {
+            "key": " OS ",
+            "keyColor": "38;5;204",   // Dracula red
+            "type": "os"
+        },
+        {
+            "key": " VER",
+            "keyColor": "38;5;118",   // Dracula green
+            "type": "kernel"
+        },
+        {
+            "key": " PKG",
+            "keyColor": "38;5;228",   // Dracula yellow
+            "type": "packages"
+        },
+        {
+            "key": " DE ",
+            "keyColor": "38;5;117",   // Dracula blue
+            "type": "de"
+        },
+        {
+            "key": " WM ",
+            "keyColor": "38;5;111",   // Dracula blue (a lighter shade)
+            "type": "wm"
+        },
+        {
+            "key": " CPU",
+            "keyColor": "38;5;176",   // Dracula purple
+            "type": "cpu"
+        },
+        {
+            "key": " GPU",
+            "keyColor": "38;5;183",   // Dracula purple (a lighter shade)
+            "type": "gpu"
+        },
+        {
+            "key": " MEM",
+            "keyColor": "38;5;81",    // Dracula cyan
+            "type": "memory"
+        },
+        "break"
+    ]
+}
