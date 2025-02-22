@@ -2,10 +2,13 @@
 "
 call plug#begin()
 
+
+Plug 'wafelack/ark.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail_improved'
@@ -23,23 +26,20 @@ colorscheme dracula
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 set number relativenumber
 set viminfofile=NONE
-set encoding=UTF-8
 set noerrorbells
-set shiftwidth=2
+set shiftwidth=4
 set smartindent
+set ignorecase
 set autoindent
-set noswapfile
 set viminfo=""
 set smartcase
+set showmatch
 set incsearch
 set expandtab
-set tabstop=2
-set smarttab
+set tabstop=4
+syntax enable
 filetype on
-set nowrap
-syntax on
-set ruler
-set nu
+set showcmd
 
 " Custom Keybindings
 "
