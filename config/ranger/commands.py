@@ -11,6 +11,7 @@ from __future__ import (absolute_import, division, print_function)
 
 # You can import any python module as needed.
 import os
+import subprocess
 
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
@@ -60,3 +61,21 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+# Change the location to college folder
+class rtu(Command):
+    def execute(self):
+        self.fm.cd("~/Desktop/RiTeh UNIRI")
+
+class zr(Command):
+    """
+    Shortcut for running Zsh commands with ~/.zshrc sourced
+    Usage:   :zr <command>
+    Example: :zr extr file.rar
+    """
+    def execute(self):
+        if not self.rest(1):
+            self.fm.notify("ERROR: Command is needed!", bad=True)
+            return
+        command = f"zsh -c 'source ~/.config/zsh/.zshrc && {self.rest(1)}'"
+        self.fm.execute_command(command)
